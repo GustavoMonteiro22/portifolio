@@ -1,0 +1,107 @@
+
+
+#visor{
+	min-height:300px;
+	width:100%;
+	
+	
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-name: aproximar;
+	
+	background-image: url("../img/terra.jpg");
+	background-size: 100% 100%;
+	opacity: 0.8;
+
+
+}
+
+#visor-sup{
+	width:100%;
+	min-height:300px;
+	
+	background-image: url("../img/pattern.png");
+
+	color:rgb(51, 153, 51);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+}
+
+#capa-text{
+		position: absolute;
+		top: 40%;
+		font-family: RobotoDraft,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+		font-size: 20px;
+		vertical-align: middle;
+		color:#fff;
+		text-align: center;
+		display: inline-block;
+		width: 100%;
+
+}
+
+#capa-text i{
+	font-size: 40px;
+}
+
+
+#circle{
+	position: relative;
+	top:60px;
+	color:#fff;
+	text-align: center;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	border: 2px solid #fff;
+	display: inline-block;
+	padding: 8px;
+ -webkit-border-radius: 180px;
+-moz-border-radius: 180px;
+border-radius: 180px;
+
+}
+
+#circle #seta{
+	width:35px !important;
+	height:35px !important;
+}
+
+
+
+
+
+@-webkit-keyframes animation {
+    0%   {color:rgb(51, 153, 51);}
+    50%  {color:#000;}
+    100% {color:rgb(51, 153, 51);}
+}
+
+
+@-webkit-keyframes aproximar {
+    0%   {
+			-webkit-filter: blur(0px);
+   		-moz-filter: blur(0px);
+    	-ms-filter: blur(0px);
+     -o-filter: blur(0px);
+		 filter: blur(0px);
+	 }
+
+	 50%   {
+		-webkit-filter: blur(1px);
+			-moz-filter: blur(1px);
+		-ms-filter: blur(1px);
+		-o-filter: blur(1px);
+	 filter: blur(1px);
+ 	}
+
+ 100%   {
+	-webkit-filter: blur(0px);
+		-moz-filter: blur(0px);
+	-ms-filter: blur(0px);
+	-o-filter: blur(0px);
+ filter: blur(0px);
+}
+
+}

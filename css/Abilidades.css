@@ -1,0 +1,169 @@
+#MinhasHabilidades article{
+	padding-bottom: 50px;
+	min-height: 100%;
+}
+
+
+#PHP{
+	background:#66a;
+
+}
+
+
+#VB{
+	background:#a6a;
+
+}
+
+
+#Java{
+	background:#f80;
+	padding-top: 40px;
+}
+#CSharp{
+	background:#0a6;
+
+}
+
+#JavaScript{
+	background:#c60;
+
+}
+
+
+#HTML{
+	background:#f66;
+
+}
+
+
+#CSS{
+	background:#069;
+
+}
+
+#Android{
+	background: #6ab344;
+
+}
+
+#Outros{
+	background:#c33;
+
+}
+
+.borda{
+padding:10px!important;
+}
+
+.skill{
+	font-weight:bold;
+	height:200px;
+	text-align:center;
+	color:#fff;
+	transition: all 0.5s ease;
+	font-size:25px;
+	font-style: italic;
+	padding-top:60px;
+
+}
+
+.skill:hover{
+	z-index:100;
+	transform:scale(1.05,1.05);
+	cursor:pointer;
+}
+
+
+.skillConteudo{
+	position:fixed !important;
+	z-index:101;
+	left:10%;
+	width:80%;
+	top:100px !important;
+	margin:0px!important;
+	padding:80px;
+	background:#fff;
+
+}
+
+.skillConteudo  .exit{
+	font-size:30px;
+	position:absolute;
+	top:30px;
+	right:30px;
+}
+
+
+.skillConteudo  .exit:hover{
+	cursor:pointer;
+	text-decoration: none;
+}
+
+
+.skillConteudo h2{
+	font-size:25px;
+}
+
+.skillConteudo hr{
+	background: #666;
+	height: 5px;
+}
+
+
+.skillConteudo h3{
+	font-size:20px;
+	padding-bottom: 10px;
+	border-bottom: 3px dotted #666;
+}
+
+.skillConteudo ul li{
+	display:inline-block;
+	margin:5px;
+}
+
+.ui-sortable{
+	padding:0px;
+}
+
+#MascaraFundo{
+	background: #000;
+	opacity: 0.6;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display:none;
+}
+
+.mylabel{
+	background-color: #66a;
+	color: #fff;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 5px;
+	display: inline-block;
+	border: 1px solid #55a;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+@media screen and (max-width: 1250px) {
+    .skill{
+	font-size:20px;
+	}
+
+}
+
+@media screen and (max-width: 990) {
+    .skill{
+	height:150px;
+	padding-top:50px;
+	}
+
+}

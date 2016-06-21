@@ -1,0 +1,257 @@
+
+.timeline .data:hover{
+	cursor:pointer;
+}
+
+.timeline{
+	padding-left:20%;
+		-webkit-box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+padding:10px;
+background:#fff;
+
+}
+
+.timeline .data{
+	display:inline-block;
+	text-align:center;
+	width:20%;
+	bottom:60px;
+}
+
+
+#menu-game {	
+	z-index: 100;
+	color: #ccc;
+	position: absolute;
+	top:100px;
+	width:60%;
+	text-align: center;
+	margin-left:20%;
+	margin-right:20%;
+	padding:40px;
+	border:1px solid #ccc;
+	
+}
+
+#menu-game span{
+	display:block;
+	
+}
+
+
+.end-game{
+	z-index: 100;
+	color: #ccc;
+	position: absolute;
+	top:100px;
+}
+
+#menu-game span:hover{
+	cursor: pointer;
+}
+
+
+
+#timeText{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 100%;
+  height: 400px;
+  -webkit-perspective: 500px; /* Chrome, Safari, Opera */
+    perspective: 500px;
+  vertical-align:bottom;
+  text-align:center;
+  background:#000;
+	overflow: hidden;;
+
+}
+
+.task{
+   -webkit-transform: rotateX(30deg); /* Chrome, Safari, Opera  */
+    transform: rotateX(30deg);
+	height:350px;
+	font-size:30px;
+	display:none;
+	text-align:justify;
+	overflow-y:hidden;
+	padding-left:200px;
+	padding-right:200px;
+	color:#E0E02C;
+
+}
+
+.task h1{
+	font-size:45px;
+	font-weight:bold;
+	text-align:center;
+}
+
+.task h2{
+	font-size:40px;
+	font-weight:bold;
+	text-align:center;
+}
+
+
+#controls{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	z-index: 101;
+	color: #E0E02C;
+	display: none;
+}
+
+
+
+#jsnav{
+
+	position: absolute;
+	top: 100px;
+
+	width:30px;
+	height:21px;
+	background-image:url(../img/game/jsnav.png);
+ }
+
+
+
+.vbnav{
+	position: absolute;
+	width:30px;
+	height:21px;
+	background-image:url(../img/game/vbnav.png);
+}
+
+
+
+
+
+
+
+
+
+#logo{
+	width:800px;
+	vertical-align: middle;
+
+}
+
+#controls i{
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.shoot{
+	background:#0f0;
+	position:absolute;
+	width:5px;
+	height:2px;
+}
+
+
+.enemy-shoot{
+	background:#f00;
+	position:absolute;
+	width:5px;
+	height:2px;
+	left:auto;
+	right:auto;
+}
+
+
+.ammobox{
+	width:15px;
+	height:15px;	
+	position: absolute;
+	
+	background-image:url(../img/game/ammobox.png);
+	background-repeat:no-repeat;
+    background-position:50% 50%;
+	background-size: 100% 100%;
+	
+}
+
+
+.batery{
+	width:15px;
+	height:15px;	
+	position: absolute;
+	
+	background-image:url(../img/game/bateria.png);
+	background-repeat:no-repeat;
+    background-position:50% 50%;
+	background-size: 100% 100%;
+	
+}
+
+.explosion{
+	width:15px;
+	height:15px;	
+	position: absolute;
+	
+	background-image:url(../img/game/explosion.gif);
+	background-repeat:no-repeat;
+    background-position:50% 50%;
+	background-size: 100% 100%;
+}
+
+@media screen and (max-width:1100px) {
+	.task h1{
+		font-size:40px;
+	}
+	.task h2{
+		font-size:35px;
+	}
+	.task{
+		font-size:25px;
+	}
+	#timeText{
+		font-size:16px
+	}
+
+
+}
+
+#timeline li:hover{
+	cursor:pointer;
+
+}
+
+
+@media screen and (max-width:1000px){
+	.task h1{
+		font-size:35px;
+	}
+	.task h2{
+		font-size:30px;
+	}
+	.task{
+		font-size:20px;
+		padding-left:100px;
+		padding-right:100px;
+	}
+	#timeText{
+		font-size:14px
+	}
+}
+
+@media screen and (max-width:800px){
+	.task h1{
+		font-size:33px;
+	}
+	.task h2{
+		font-size:28px;
+	}
+	.task{
+		font-size:18px;
+		padding-left:50px;
+		padding-right:50px;
+	}
+	#timeText{
+		font-size:12px
+	}
+}

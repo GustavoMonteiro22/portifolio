@@ -1,0 +1,35 @@
+#Contato{
+  background: #eee;
+  display: block;
+  height: 600px;
+}
+
+form{
+  background-color: #fff;
+  padding:30px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+form hr {
+  background: #009688;
+}
+
+form h2{
+  font-size: 22px;
+
+  color:#009688;
+}
+
+#Contato form button{
+  width: 100%;
+  height:40px;
+  background: none;
+  border: 1px solid #999;
+  color: #999;
+}
+
+form textarea{
+   resize: none;
+}

@@ -1,0 +1,39 @@
+
+body > header{
+	width:100%;
+	height:80px;
+	position:relative;
+	top:0px;
+	left:0px;
+	border-bottom:1px solid #999;
+	color:#eee;
+	z-index:101;
+
+		-webkit-box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+}
+
+
+body > header > .header-1{
+	border-top:20px #666 solid;
+	
+	background:#999;
+	height:80px;
+	width:100%;
+	margin:0px;
+	display:inline-block;
+	padding:20px;
+	padding-left:50px;
+}
+
+
+
+body > header  nav  a{
+	color:#000;
+}
+
+body > header h1{
+	font-size:18px;
+	display:inline;
+}

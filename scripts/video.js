@@ -20,40 +20,34 @@ menu();
 
 
 function menu(){
-	$('#timeText').html();
+	$('#timeText').html("");
 	$('#timeText').append('<div id="menu-game"><h1>Code Wars</h1><span id="play">Jogar</span><span id="tutorial">Instruções</span><span id="conf">Configurações</span></div>');
-
-	$('#play').click(function(){		
-		 ga('send', 'event', 'Jogou',' jogar', 'Code Wars');
-		$('#menu-game').remove();
-		//$('#timeText').append('<img src="img/star.png"  draggable="false" id="logo"  alt="">');
-		//$('#timeText').append('<div class="task" id="task"></div>');
-		
-		//$('#logo').hide(6000,function(){			
-		//	$("#controls").show();
-		//	TimeLine();
-		//});
-
-		game();		
-	});
-
-	$('#tutorial').click(function(){
-		
-	});
-
-	$('#conf').click(function(){
-		$('#menu-game').html('');
-		$('#menu-game').append('<span>Volume:<span> ');
-		$('#menu-game').append('<span class="voltar">Voltar<span> ');
-	});
-	
-	$('.voltar').click(function(){
-		$('#menu-game').html('');
-		$('#menu-game').append('<div id="menu-game"><span id="play">Jogar</span><span id="tutorial">Instruções</span><span id="conf">Configurações</span></div>');
-	});
-	
-
 }
+
+$('#menu-game').on("click",'#play',function(){		
+	// ga('send', 'event', 'Jogou',' jogar', 'Code Wars');
+	$('#menu-game').remove();
+	game();		
+});
+
+$('#menu-game').on("click",'#tutorial',function(){
+	var html = '<div style="width:180;overflow: scroll;"><h1>Instruções</h1><div class="istru-1"><p>Use as setas (cima e baixo) para guiar a <img src="img/game/jsnav.png" style="display:inline"> (nave) e aperte a barra de espaço para atirar.</p>';
+	html += '<p>Fique atento a ao indicador de bateria da sua nave caso o mesmo termine seus escudos serão desabilitados e a pressão do espaço irá destruir a sua nave. Colete as <img src="img/game/bateria.png" style="display:inline"> (baterias) para ganhar mais tempo de jogo.</p> ';	
+	html += '<p>Colete as <img src="img/game/vbnav.png" style="display:inline"> (caixas de munição) para poder atirar nas <img src="img/game/vbnav.png" style="display:inline"> (naves) e ganhar pontos</p>'
+	html += '<br><span class="voltar">Voltar ao menu<span>';
+	$('#menu-game').html(html);
+});
+
+$('#menu-game').on("click",'#conf',function(){
+	$('#menu-game').html('');
+	$('#menu-game').append('<span>Volume:<span> ');
+	$('#menu-game').append('<span class="voltar">Voltar<span> ');
+});
+
+
+$('#menu-game').on("click", ".voltar", function() {
+  menu();
+});
 
 
 
@@ -71,21 +65,6 @@ $("#controls .volume").click(function(){
 		document.getElementById("song").volume = 1;
 	}
 });
-
-
-
-function TimeLine(){
-	$('.task').scrollTop(0);
-	$('.task').hide();
-	$('.task').html("<br><br><br><br><br><br><br><br><br>");
-
-	$('.task').html($('.task').html() + "<h1>Episódio I</h1><h2>Um novo começo</h2>");
-	$('.task').html($('.task').html() + "<p>A muito tempo,após a crição do protocolo HTTP as forças da NetScape e a Microsoft estavam travando uma grande guerra que estava abalando todos os pilares da web, esse período ficou conhecido como a grande guerra dos navegadores, durante esse período conturbado nasce uma criança predestinda a dominar a arte da programação.</p>");
-
-
-	animation();
-
-}
 
 function animation(){
 	document.getElementById("song").play();
