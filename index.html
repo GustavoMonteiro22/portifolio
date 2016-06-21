@@ -454,7 +454,7 @@ Meu nome é Gustavo Henrique, eu sou um Desenvolvedor web, atualmente estou curs
 				<div class='col-md-3'></div>
 				<div class='col-md-6'>
 
-					<form method="POST" action="mail.php">
+					<form method="POST">
 
 						<h2>Entre em contato</h2>
 						<hr>
@@ -468,7 +468,9 @@ Meu nome é Gustavo Henrique, eu sou um Desenvolvedor web, atualmente estou curs
 						 	<textarea  class="form-control" id="msg" placeholder="Corpo do email" rows="8" required></textarea>
 					 	</div>
 						<button><span class='glyphicon glyphicon-envelope'></span> Enviar Mensagem</button>
-
+						
+						
+						<div class="alert"></div>
 				 </form>
 
 				</div>
@@ -476,7 +478,30 @@ Meu nome é Gustavo Henrique, eu sou um Desenvolvedor web, atualmente estou curs
 
 			</article>
 		</div>
-
+		<script>
+			$('form').submit(function(event){
+			
+				$.ajax({
+					type: 'POST',
+					dataType: 'json',
+					url: 'scripts/mail.php',
+					async: true,
+					data: $('form').serialize(),
+					success: function(response) {
+						$('.alert').addClass('alert-success');
+						$('.alert').html('Email enviado com sucesso !');
+						$('#email').attr('disabled',true);
+						$('#email').attr('header',true);
+						$('#email').attr('msg',true);
+					}
+				)};
+				
+				event.preventdefault();
+				
+            });
+			
+			});
+		</script>
 
 	</section>
 
